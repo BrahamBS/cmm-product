@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(221, 148, 13);
+    color: rgb(234, 231, 241);
+    text-align: center;
+    margin: 0px;
+    font-size: .9em;
+    justify-content: flex-end;
+}
+.copyright{
+    align-self: center;
+    justify-self: center;
+}
