@@ -1,8 +1,8 @@
 <form [formGroup]="loginForm" novalidate>
   <mat-card class="card">
-    <mat-card-header fxLayout="column" fxLayoutAlign="center center"> 
-      <img class="beauty" src="./assets/beauty_center.png" fxFlexAlign="center">
-      <mat-card-title fxFlexAlign="center">Connection</mat-card-title>
+    <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+      <img class="logo" src="./assets/logo.png" fxFlexAlign="center">
+      <mat-card-title fxFlexAlign="center">Login</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <div class="row">
@@ -23,12 +23,8 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput 
-                   placeholder="Mot de Passe" 
-                   formControlName="password"
-                   [type]="hide ? 'text' : 'password' "
-                   required
-                   >
+            <input matInput placeholder="Mot de Passe" formControlName="password" [type]="hide ? 'text' : 'password' "
+              required>
             <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
               Mot de passe est <strong>obligatoire</strong>
             </mat-error>
@@ -42,10 +38,7 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-stroked-button 
-              color="accent" 
-              [disabled]="!loginForm.valid" 
-              (click)="onSubmit()">Connecter</button>
+      <button mat-stroked-button color="accent" [disabled]="!loginForm.valid" (click)="onSubmit()">Connecter</button>
     </mat-card-actions>
   </mat-card>
 </form>

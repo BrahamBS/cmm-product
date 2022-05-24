@@ -13,10 +13,12 @@ import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confir
 import { HomePageComponent } from './home-page/home-page.component';
 
 
+
 @NgModule({
   declarations: [
-    HomePageComponent,
     ConfirmationDialogComponent,
+    AppComponent,
+    HomePageComponent,
 
   ],
   imports: [
@@ -27,7 +29,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     UserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FrontOfficeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
