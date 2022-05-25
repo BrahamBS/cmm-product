@@ -1,10 +1,7 @@
-POST http://localhost:9000/users
+POST http://localhost:3000/users
 
 Content-Type: application/json
-Authorization: Bearer masterkey
-
 {
-
     "email":"braham.samira78@gmail.com",
     "password":"toto2022",
     "name":"Mme Samira "
