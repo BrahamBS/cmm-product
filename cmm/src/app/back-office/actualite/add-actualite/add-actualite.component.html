@@ -1,1 +1,34 @@
-<p>add-actualite works!</p>
+<form [formGroup]="actualiteForm" novalidate>
+    <mat-card class="actualite-card">
+      <mat-card-header>
+         <mat-card-title>Ajout Actualité</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="titre" formControlName="titre">
+              <mat-error *ngIf="actualiteForm.controls['titre'].hasError('required')">
+                Titre d'Actualite <strong>est obligatoire</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="contenue" formControlName="contenue">
+              <mat-error *ngIf="actualiteForm.controls['contenue'].hasError('required')">
+                Contenue <strong>est obligatoire</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="flex flex-row w-full ">
+        <button  mat-raised-button [routerLink]="['/admin/actualite']">Annuler</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Enregistrer</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

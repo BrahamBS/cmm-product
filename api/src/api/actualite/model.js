@@ -14,7 +14,8 @@ const actualiteSchema = new Schema({
     required: true
   },
   isFeatured: {
-    type: Boolean
+    type: Boolean,
+    default:false
   }
 }, {
   timestamps: true,

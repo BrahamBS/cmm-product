@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminLandPageComponent } from './pages/admin-land-page/admin-land-page.component';
 import { BackOfficeRoutingModule } from './back-office-routing.module';
 import { MaterialModule } from '../shared/material/material.module';
+import { ActualiteModule } from './actualite/actualite.module';
 
 
 
@@ -32,7 +33,8 @@ import { MaterialModule } from '../shared/material/material.module';
     RouterModule,
     HttpClientModule,
     BackOfficeRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ActualiteModule
   ]
 })
 export class BackOfficeModule { }

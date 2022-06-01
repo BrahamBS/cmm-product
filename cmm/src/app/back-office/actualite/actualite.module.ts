@@ -28,6 +28,12 @@ import { HttpClientModule } from '@angular/common/http';
     ActualiteRoutingModule,
     NgxUploaderModule,
     HttpClientModule
+  ],
+  exports:[
+    AddActualiteComponent,
+    UpdateActualiteComponent,
+    ListActualiteComponent,
+    UploadActualiteComponent,
   ]
 })
 export class ActualiteModule { }

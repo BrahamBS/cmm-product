@@ -25,8 +25,8 @@ const { titre, photoUrl, contenue, isFeatured } = schema.tree
  * @apiError 401 admin access only.
  */
 router.post('/',
-  token({ required: true, roles: ['admin'] }),
-  body({ titre, photoUrl, contenue, isFeatured }),
+  //token({ required: true, roles: ['admin'] }),
+  body({ titre,  contenue }),
   create)
 
 /**
