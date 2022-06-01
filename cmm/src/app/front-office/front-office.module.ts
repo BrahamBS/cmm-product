@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LandpageComponent } from './landpage/landpage.component';
+
 
 
 import { MatDialogRef, MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
-import { HomeComponent } from './pages/home/home.component';
 import { ProjetPageComponent } from './pages/projet-page/projet-page.component';
 import { SuiviTierPageComponent } from './pages/suivi-tier-page/suivi-tier-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
@@ -20,8 +19,6 @@ import { FrontFooterComponent } from './pages/front-footer/front-footer.componen
 
 @NgModule({
   declarations: [
-    LandpageComponent,
-    HomeComponent,
     ProjetPageComponent,
     SuiviTierPageComponent,
     ContactPageComponent,
@@ -35,8 +32,6 @@ import { FrontFooterComponent } from './pages/front-footer/front-footer.componen
     UserModule
   ],
   exports: [
-    LandpageComponent,
-    HomeComponent,
     ProjetPageComponent,
     SuiviTierPageComponent,
     ContactPageComponent,

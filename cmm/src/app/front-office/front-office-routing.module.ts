@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandpageComponent } from './landpage/landpage.component';
-import { HomeComponent } from './pages/home/home.component';
+
 import { InterventionPageComponent } from './pages/intervention-page/intervention-page.component';
 import { ProjetPageComponent } from './pages/projet-page/projet-page.component';
 import { SuiviTierPageComponent } from './pages/suivi-tier-page/suivi-tier-page.component';
+import { HomePageComponent } from '../home-page/home-page.component';
 
 
 
 const routes: Routes = [
   {
-    path: '', component: LandpageComponent,
+    path: '', component: HomePageComponent,
     children: [
       {
         path: 'home',
-        component: HomeComponent
+        component: HomePageComponent
       },
       {
         path: 'intervention',

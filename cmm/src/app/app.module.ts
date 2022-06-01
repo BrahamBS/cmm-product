@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { BackOfficeModule } from './back-office/back-office.module';
 
 
 
@@ -30,7 +31,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    FrontOfficeModule
+    FrontOfficeModule,
+    BackOfficeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

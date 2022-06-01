@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-landpage',
-  templateUrl: './landpage.component.html',
-  styleUrls: ['./landpage.component.scss']
+  selector: 'app-land-page',
+  templateUrl: './admin-land-page.component.html',
+  styleUrls: ['./admin-land-page.component.scss']
 })
-export class LandpageComponent {
+export class AdminLandPageComponent  {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -17,5 +17,4 @@ export class LandpageComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-
 }

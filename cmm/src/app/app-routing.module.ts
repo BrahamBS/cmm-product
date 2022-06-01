@@ -14,14 +14,14 @@ const routes: Routes = [
     // canActivate:[AuthGuard],
     // canActivateChild:[AuthGuard]
   },
-  // {
-  //   path: 'admin',
-  //   loadChildren: () => import('./back-office/back-office.module').then(m => m.BackOfficeModule),
-  //   canLoad:[AuthGuard,AdminGuard],
-  //   canActivate:[AuthGuard,AdminGuard],
-  //   canActivateChild:[AuthGuard,AdminGuard]
-  // }
-  // , 
+  {
+    path: 'admin',
+    loadChildren: () => import('./back-office/back-office.module').then(m => m.BackOfficeModule),
+    // canLoad:[AuthGuard,AdminGuard],
+    // canActivate:[AuthGuard,AdminGuard],
+    // canActivateChild:[AuthGuard,AdminGuard]
+  }
+  , 
   {
     path: '**',
     redirectTo: 'home',
