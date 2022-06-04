@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { BackOfficeModule } from './back-office/back-office.module';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 
 
@@ -32,8 +33,9 @@ import { BackOfficeModule } from './back-office/back-office.module';
     FormsModule,
     ReactiveFormsModule,
     FrontOfficeModule,
-    BackOfficeModule
-  ],
+    BackOfficeModule,
+    AngularEditorModule
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })

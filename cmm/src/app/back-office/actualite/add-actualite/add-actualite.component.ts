@@ -4,16 +4,19 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ActualiteService } from '../actualite.service';
 
+
+
 @Component({
   selector: 'app-add-actualite',
   templateUrl: './add-actualite.component.html',
   styleUrls: ['./add-actualite.component.scss']
 })
 export class AddActualiteComponent implements OnInit {
+  
 
   actualiteForm = this.fb.group({
     titre: [null, Validators.required],
-    contenue: [null, Validators.required],
+    contenue: ['', Validators.required],
   });
 
   constructor(private fb: FormBuilder,

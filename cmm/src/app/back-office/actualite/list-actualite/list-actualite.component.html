@@ -33,7 +33,7 @@
                     <!-- contenue Column -->
                     <ng-container matColumnDef="contenue">
                         <th mat-header-cell *matHeaderCellDef mat-sort-header>Contenue</th>
-                        <td mat-cell *matCellDef="let row">{{row.contenue}}</td>
+                        <td mat-cell *matCellDef="let row" [innerHTML]="row.contenue"></td>
                     </ng-container>
 
             

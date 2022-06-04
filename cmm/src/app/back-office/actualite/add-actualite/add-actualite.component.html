@@ -16,12 +16,17 @@
         </div>
         <div class="row">
           <div class="col">
-            <mat-form-field class="full-width">
-              <input matInput placeholder="contenue" formControlName="contenue">
+           
+              <angular-editor 
+                matInput
+                placeholder="'Tapez ici ...'" 
+                formControlName="contenue"
+                >
+              </angular-editor>
               <mat-error *ngIf="actualiteForm.controls['contenue'].hasError('required')">
                 Contenue <strong>est obligatoire</strong>
               </mat-error>
-            </mat-form-field>
+           
           </div>
         </div>
       </mat-card-content>

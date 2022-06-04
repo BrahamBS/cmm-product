@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../../shared/material/material.module';
 import { NgxUploaderModule } from 'ngx-uploader';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 
 
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     ActualiteRoutingModule,
     NgxUploaderModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularEditorModule
   ],
   exports:[
     AddActualiteComponent,
