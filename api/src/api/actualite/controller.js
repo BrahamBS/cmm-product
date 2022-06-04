@@ -1,6 +1,7 @@
 import { success, notFound } from '../../services/response/'
 import { Actualite } from '.'
 import { actualiteUpload } from '../../services/multer'
+import { ObjectId } from 'mongoose'
 
 export const create = ({ bodymen: { body } }, res, next) =>
   Actualite.create(body)
@@ -50,7 +51,11 @@ export const uploadActualitePhoto = async (req, res, next) => {
     try {
       const uploadedPhoto = req.file
       const photoUrl = 'uploads/' + uploadedPhoto.filename
-      const response = await Actualite.findByIdAndUpdate(req.params.id, { photoUrl: photoUrl })
+      const response = Actualite.findOneAndUpdate(
+        {
+          _id: ObjectId(req.params.id)
+        }, { photoUrl: photoUrl }
+      );
       res.json(response)
     } catch (error) {
       console.log(error)
