@@ -8,7 +8,7 @@ import { ActualiteService } from '../actualite.service';
 import { ActualiteListDataSource } from './actualite-list-datasource';
 import { IActualite } from '../actualite.model';
 import { MatTable } from '@angular/material/table';
-import { debounceTime, distinctUntilChanged, merge, tap } from 'rxjs';
+import { debounceTime, distinctUntilChanged, merge, tap,fromEvent } from 'rxjs';
 import { ConfirmationDialogComponent } from 'src/app/shared/confirmation-dialog/confirmation-dialog.component';
 import { environment } from 'src/environments/environment';
 

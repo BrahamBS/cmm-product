@@ -41,6 +41,6 @@ export class ActualiteService {
   }
 
   updateActualite(id:string, actualite:IActualite):Observable<any>{
-    return this.http.put(`${environment.API_URL}/dresses/${id}`,actualite,{ 'headers': headers }) as Observable<any>
+    return this.http.put(`${environment.API_URL}/actualites/${id}`,actualite,{ 'headers': headers }) as Observable<any>
   }
 }

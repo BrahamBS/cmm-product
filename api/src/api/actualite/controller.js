@@ -1,5 +1,6 @@
 import { success, notFound } from '../../services/response/'
 import { Actualite } from '.'
+import { actualiteUpload } from '../../services/multer'
 
 export const create = ({ bodymen: { body } }, res, next) =>
   Actualite.create(body)
@@ -39,3 +40,21 @@ export const destroy = ({ params }, res, next) =>
     .then((actualite) => actualite ? actualite.remove() : null)
     .then(success(res, 204))
     .catch(next)
+
+
+export const uploadActualitePhoto = async (req, res, next) => {
+  await actualiteUpload(req, res, async (error) => {
+    if (error) {
+      res.json({ error: error })
+    }
+    try {
+      const uploadedPhoto = req.file
+      const photoUrl = 'uploads/' + uploadedPhoto.filename
+      const response = await Actualite.findByIdAndUpdate(req.params.id, { photoUrl: photoUrl })
+      res.json(response)
+    } catch (error) {
+      console.log(error)
+      next(error)
+    }
+  })
+}

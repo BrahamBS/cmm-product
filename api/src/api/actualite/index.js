@@ -5,6 +5,7 @@ import { token } from '../../services/passport'
 import { create, index, show, update, destroy } from './controller'
 import { schema } from './model'
 export Actualite, { schema } from './model'
+import { uploadActualitePhoto } from './controller'
 
 const router = new Router()
 const { titre, photoUrl, contenue, isFeatured } = schema.tree
@@ -72,6 +73,22 @@ router.put('/:id',
   //token({ required: true, roles: ['admin'] }),
   body({ titre, photoUrl, contenue, isFeatured }),
   update)
+
+/**
+ * @api {put} /actualites/photo/:id Update actualite
+ * @apiName UploadActualitePhoto
+ * @apiGroup Actualite
+ * @apiPermission admin
+ * @apiParam {String} access_token admin access token.
+ * @apiSuccess {Object} actualite Actualite's data.
+ * @apiError {Object} 400 Some parameters may contain invalid values.
+ * @apiError 404 Actualite not found.
+ * @apiError 401 admin access only.
+ */
+ router.put('/photo/:id',
+ //token({ required: true, roles: ['admin'] }),
+ uploadActualitePhoto)
+
 
 /**
  * @api {delete} /actualites/:id Delete actualite

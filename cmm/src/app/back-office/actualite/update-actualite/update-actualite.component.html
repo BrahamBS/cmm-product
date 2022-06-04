@@ -1,1 +1,61 @@
-<p>update-actualite works!</p>
+<section class="h-full bg-gray-200 gradient-form md:h-screen">
+  <div class="container h-full px-6 py-12">
+    <div class="flex flex-wrap items-center justify-center h-full text-gray-800 g-6">
+      <div class="xl:w-10/12">
+        <div class="block bg-white rounded-lg shadow-lg">
+          <div class="lg:flex lg:flex-wrap g-0">
+            <form [formGroup]="actualiteForm" novalidate>
+              <mat-card class="actualite-card">
+                <mat-card-header>
+                  <mat-card-title>Mise a jour Actualité</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+
+                  <div class="row">
+                    <div class="col">
+                      <mat-form-field class="full-width">
+                        <input matInput placeholder="Titre" formControlName="titre">
+                        <mat-error *ngIf="actualiteForm.controls['titre'].hasError('required')">
+                          Titre <strong>est obligatoire</strong>
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+
+                      <angular-editor matInput placeholder="Contenue" formControlName="contenue"></angular-editor>
+                      <mat-error *ngIf="actualiteForm.controls['contenue'].hasError('required')">
+                        Contenue <strong>est obligatoire</strong>
+                      </mat-error>
+
+                    </div>
+                  </div>
+
+
+                  <app-upload-actualite [actualiteId]="currentActualiteId" (uploadPictureEvent)="refresh($event)">
+                  </app-upload-actualite>
+
+                </mat-card-content>
+                <mat-card-actions class="flex flex-row w-full ">
+                  <button mat-raised-button [routerLink]="['/admin/actualite']">Annulé</button>
+                  <button mat-raised-button color="primary" (click)="onSubmit()">Enregistrer</button>
+                </mat-card-actions>
+              </mat-card>
+            </form>
+            <!--  End of form-->
+
+
+            <div class="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none" style="
+                  background: linear-gradient(to right);
+                ">
+              <div class="px-4 py-6 md:p-12 md:mx-6">
+                <img [src]="getPhotoUrl(currentPhotoUrl)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
