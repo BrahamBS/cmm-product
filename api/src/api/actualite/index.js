@@ -69,7 +69,7 @@ router.get('/:id',
  * @apiError 401 admin access only.
  */
 router.put('/:id',
-  token({ required: true, roles: ['admin'] }),
+  //token({ required: true, roles: ['admin'] }),
   body({ titre, photoUrl, contenue, isFeatured }),
   update)
 
@@ -84,7 +84,7 @@ router.put('/:id',
  * @apiError 401 admin access only.
  */
 router.delete('/:id',
-  token({ required: true, roles: ['admin'] }),
+ // token({ required: true, roles: ['admin'] }),
   destroy)
 
 export default router
