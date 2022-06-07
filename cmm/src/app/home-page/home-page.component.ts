@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs';
+import { ActualiteService } from '../back-office/actualite/actualite.service';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  public actualities:any;
 
-  constructor() { }
+  constructor(private actualiteServices:ActualiteService) { }
 
   ngOnInit(): void {
+    this.actualiteServices.chercherActualites()
+    .pipe(take(4))
+    .subscribe({
+      next:(data:any)=>{
+        this.actualities=data['rows']
+      },
+      error: (error:any)=>{
+
+      },
+      complete:()=>{
+        
+      }
+      
+    })
+
   }
 
 }

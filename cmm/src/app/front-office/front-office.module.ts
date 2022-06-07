@@ -13,6 +13,7 @@ import { MaterialModule } from '../shared/material/material.module';
 import { UserModule } from '../shared/user/user.module';
 import { RouterModule } from '@angular/router';
 import { FrontFooterComponent } from './pages/front-footer/front-footer.component';
+import { ActualiteCardComponent } from './actualite/actualite-card/actualite-card.component';
 
 
 
@@ -23,7 +24,8 @@ import { FrontFooterComponent } from './pages/front-footer/front-footer.componen
     SuiviTierPageComponent,
     ContactPageComponent,
     InterventionPageComponent,
-    FrontFooterComponent
+    FrontFooterComponent,
+    ActualiteCardComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { FrontFooterComponent } from './pages/front-footer/front-footer.componen
     SuiviTierPageComponent,
     ContactPageComponent,
     InterventionPageComponent,
-    FrontFooterComponent
+    FrontFooterComponent,
+    ActualiteCardComponent
   ],
 })
 export class FrontOfficeModule { }
