@@ -52,8 +52,8 @@ export class UpdateActualiteComponent implements OnInit {
 
   onSubmit(): void {
     let actualite = this.actualiteForm.value;
-    actualite.photoUrl=this.currentPhotoUrl;
-
+    
+ 
 
     this.actualiteService.updateActualite(this.currentActualiteId, actualite).subscribe({
       next: (data) => {
@@ -76,6 +76,6 @@ export class UpdateActualiteComponent implements OnInit {
                 : `${environment.API_URL}/${url}`;
   }
   refresh(event:any) {
-    console.log(`%c Refresh()`, 'background-color:green;color:white');
+    console.log(`%c Refresh(${event})`, 'background-color:green;color:white');
   }
 }

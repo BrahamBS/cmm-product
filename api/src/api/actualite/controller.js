@@ -53,10 +53,7 @@ export const uploadActualitePhoto = async (req, res, next) => {
       const uploadedPhoto = req.file
       const photoUrl = 'uploads/' + uploadedPhoto.filename
       const response = await Actualite.findByIdAndUpdate(
-        req.params.id, { photoUrl: photoUrl },
-        {
-          new: true
-        })
+        req.params.id, { photoUrl: photoUrl })
         
       res.json(response)
     } catch (error) {

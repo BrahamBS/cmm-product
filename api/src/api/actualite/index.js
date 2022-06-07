@@ -71,7 +71,7 @@ router.get('/:id',
  */
 router.put('/:id',
   //token({ required: true, roles: ['admin'] }),
-  body({ titre, photoUrl, contenue, isFeatured }),
+  body({ titre, contenue, isFeatured }),
   update)
 
 /**
