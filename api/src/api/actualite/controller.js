@@ -1,7 +1,7 @@
 import { success, notFound } from '../../services/response/'
 import { Actualite } from '.'
 import { actualiteUpload } from '../../services/multer'
-import { ObjectId } from 'mongoose'
+import { ObjectId } from 'Mongoose.Types.ObjectId'
 
 export const create = ({ bodymen: { body } }, res, next) =>
   Actualite.create(body)
