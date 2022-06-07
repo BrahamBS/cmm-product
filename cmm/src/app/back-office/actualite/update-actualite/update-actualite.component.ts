@@ -52,15 +52,20 @@ export class UpdateActualiteComponent implements OnInit {
 
   onSubmit(): void {
     let actualite = this.actualiteForm.value;
+    actualite.photoUrl=this.currentPhotoUrl;
+
+
     this.actualiteService.updateActualite(this.currentActualiteId, actualite).subscribe({
       next: (data) => {
         this.router.navigate(['/admin/actualite']);
         this.snackBar.open("L'Actualité est mis a jour avec succé", 'x')
       },
+
       error: (error) => {
         this.snackBar.open("Operation de mis a jour echoué", 'x');
         console.error(error)
       },
+
       complete: () => { }
     })
   }

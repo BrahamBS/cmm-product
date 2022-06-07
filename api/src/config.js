@@ -30,9 +30,7 @@ const config = {
     jwtSecret: requireProcessEnv('JWT_SECRET'),
     mongo: {
       options: {
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
-        useCreateIndex: true
+        
       }
     }
   },

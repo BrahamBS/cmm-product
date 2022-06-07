@@ -7,7 +7,7 @@ const actualiteSchema = new Schema({
     required: true
   },
   photoUrl: {
-    type: String
+    type: String,
   },
   contenue: {
     type: String,

@@ -52,9 +52,12 @@ export const uploadActualitePhoto = async (req, res, next) => {
     try {
       const uploadedPhoto = req.file
       const photoUrl = 'uploads/' + uploadedPhoto.filename
-      const response = await Actualite.findByIdAndUpdate(req.params.id, 
-        { photoUrl: photoUrl }
-      );
+      const response = await Actualite.findByIdAndUpdate(
+        req.params.id, { photoUrl: photoUrl },
+        {
+          new: true
+        })
+        
       res.json(response)
     } catch (error) {
       console.log(error)
