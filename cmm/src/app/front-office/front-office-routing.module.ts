@@ -7,6 +7,7 @@ import { SuiviTierPageComponent } from './pages/suivi-tier-page/suivi-tier-page.
 import { HomePageComponent } from '../home-page/home-page.component';
 import { ActualitePageComponent } from '../back-office/pages/actualite-page/actualite-page.component';
 import { FrontLandpageComponent } from '../front-landpage/front-landpage.component';
+import { FrontActualitePageComponent } from './pages/front-actualite-page/front-actualite-page.component';
 
 
 
@@ -20,7 +21,7 @@ const routes: Routes = [
       },
       {
         path: 'actualites',
-        component: ActualitePageComponent,
+        component: FrontActualitePageComponent,
 
       },
       {

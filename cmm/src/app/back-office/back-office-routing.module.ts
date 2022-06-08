@@ -7,6 +7,8 @@ import { UpdateActualiteComponent } from "./actualite/update-actualite/update-ac
 import { ActualiteResolver } from './actualite/actualite.resolver';
 import { AdminLandPageComponent } from "./pages/admin-land-page/admin-land-page.component";
 import { InterventionPageComponent } from '../front-office/pages/intervention-page/intervention-page.component';
+import { ProjetPageComponent } from './pages/projet-page/projet-page.component';
+import { SuiviPrestatairePageComponent } from './pages/suivi-prestataire-page/suivi-prestataire-page.component';
 
 const routes: Routes = [
     {
@@ -29,26 +31,60 @@ const routes: Routes = [
           ]
   
         },
-        // {
-        //     path: 'intervention',
-        //     component: InterventionPageComponent,
-        //     children: [
-        //       { path: "", component: ListActualiteComponent },
-        //       { path: "add", component: AddActualiteComponent },
-        //       {
-        //         path: "update/:id",
-        //         component: UpdateActualiteComponent,
-        //         resolve: {
-        //           actualite: ActualiteResolver
-        //         }
-        //       },
-        //       { path: "**", redirectTo: "", pathMatch: "full" }
-        //     ]
+        {
+            path: 'intervention',
+            component: InterventionPageComponent,
+          //   children: [
+          //     { path: "", component: ListActualiteComponent },
+          //     { path: "add", component: AddActualiteComponent },
+          //     {
+          //       path: "update/:id",
+          //       component: UpdateActualiteComponent,
+          //       resolve: {
+          //         actualite: ActualiteResolver
+          //       }
+          //     },
+          //     { path: "**", redirectTo: "", pathMatch: "full" }
+          //   ]
     
-        //   },
+           },
+           {
+            path: 'projets',
+            component: ProjetPageComponent,
+          //   children: [
+          //     { path: "", component: ListActualiteComponent },
+          //     { path: "add", component: AddActualiteComponent },
+          //     {
+          //       path: "update/:id",
+          //       component: UpdateActualiteComponent,
+          //       resolve: {
+          //         actualite: ActualiteResolver
+          //       }
+          //     },
+          //     { path: "**", redirectTo: "", pathMatch: "full" }
+          //   ]
+    
+           },
+           {
+            path: 'suiviprestataire',
+            component: SuiviPrestatairePageComponent,
+          //   children: [
+          //     { path: "", component: ListActualiteComponent },
+          //     { path: "add", component: AddActualiteComponent },
+          //     {
+          //       path: "update/:id",
+          //       component: UpdateActualiteComponent,
+          //       resolve: {
+          //         actualite: ActualiteResolver
+          //       }
+          //     },
+          //     { path: "**", redirectTo: "", pathMatch: "full" }
+          //   ]
+    
+           },
         {
           path: '**',
-          redirectTo: 'home',
+          redirectTo: 'actualite',
           //  pathMatch: 'full'
         }
       ],

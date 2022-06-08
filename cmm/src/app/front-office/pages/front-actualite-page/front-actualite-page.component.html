@@ -1,0 +1,7 @@
+<!-- Actualites-->
+<div class="flex w-full p-2 m-3">
+    <div class="flex flex-wrap" *ngFor="let actualite of actualities">
+        <app-actualite-card [titre]="actualite.titre" [contenue]="actualite.contenue" [photoUrl]="actualite?.photoUrl">
+        </app-actualite-card>
+    </div>
+</div>

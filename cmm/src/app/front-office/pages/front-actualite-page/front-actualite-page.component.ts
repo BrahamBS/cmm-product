@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { map} from 'rxjs';
-import {take} from 'rxjs/operators'
-import { ActualiteService } from '../back-office/actualite/actualite.service';
+import { map, take } from 'rxjs';
+import { ActualiteService } from 'src/app/back-office/actualite/actualite.service';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  selector: 'app-front-actualite-page',
+  templateUrl: './front-actualite-page.component.html',
+  styleUrls: ['./front-actualite-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class FrontActualitePageComponent implements OnInit {
+
   public actualities:any;
 
   constructor(private actualiteServices:ActualiteService) { }
@@ -16,8 +16,9 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.actualiteServices.chercherActualites()
     .pipe(
-      map((data:any)=>data['rows'] ),                             
-      take(4))
+      map((data:any)=>{
+      return data.rows
+    }))
     .subscribe({
       next:(data:any)=>{
         this.actualities=data
