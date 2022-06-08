@@ -4,6 +4,9 @@ import { FrontLandpageComponent } from './front-landpage/front-landpage.componen
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginFormComponent } from './shared/user/login-form/login-form.component';
 import { RegisterFormComponent } from './shared/user/register-form/register-form.component';
+import { AdminGuard } from './guard/admin.guard';
+import { AuthGuard } from './guard/auth.guard';
+
 
 const routes: Routes = [
   {
@@ -24,9 +27,9 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./back-office/back-office.module').then(m => m.BackOfficeModule),
-    // canLoad:[AuthGuard,AdminGuard],
-    // canActivate:[AuthGuard,AdminGuard],
-    // canActivateChild:[AuthGuard,AdminGuard]
+    canLoad:[AuthGuard,AdminGuard],
+    canActivate:[AuthGuard,AdminGuard],
+    canActivateChild:[AuthGuard,AdminGuard]
   }
   , 
   {

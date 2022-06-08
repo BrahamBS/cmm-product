@@ -63,7 +63,7 @@ router.get('/',
  * @apiError 401 admin access only.
  */
 router.get('/:id',
-  token({ required: true, roles: ['admin'] }),
+  //token({ required: true, roles: ['admin'] }),
   show)
 
 /**
