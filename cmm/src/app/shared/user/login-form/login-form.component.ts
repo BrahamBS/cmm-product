@@ -46,14 +46,17 @@ export class LoginFormComponent {
   onSubmit() {
     this.authenticationService.login(this.loginForm.value.email, this.loginForm.value.password)
       .pipe(first())
-      .subscribe(
-        data => {
+      .subscribe({
+        next:  (data:any) => {
           this.router.navigate([this.returnUrl]);
           this.snackBar.open("Logged in Successufully", 'Close')
         },
-        error => {
+       
+        error:error => {
+          console.log(error)
           this.snackBar.open("Failed to login", 'Close')
-        });
+        }
+      });
   }
 
   getErrorMessage() {

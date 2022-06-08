@@ -20,7 +20,7 @@ export class UserService {
   }
 
   deleteUser(id:string):Observable<any>{
-    return this.httpClient.delete(`${environment.API_URL}//users/delete/${id}`) as Observable<any>;
+    return this.httpClient.delete(`${environment.API_URL}/users/delete/${id}`) as Observable<any>;
   }
 
   updateUserRole(id:string,role:string):Observable<any>{
