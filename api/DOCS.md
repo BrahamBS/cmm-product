@@ -8,6 +8,7 @@
 	- [Retrieve actualite](#retrieve-actualite)
 	- [Retrieve actualites](#retrieve-actualites)
 	- [Update actualite](#update-actualite)
+	- [Update actualite](#update-actualite)
 	
 - [Auth](#auth)
 	- [Authenticate](#authenticate)
@@ -116,6 +117,19 @@
 | photoUrl			| 			|  <p>Actualite's photoUrl.</p>							|
 | contenue			| 			|  <p>Actualite's contenue.</p>							|
 | isFeatured			| 			|  <p>Actualite's isFeatured.</p>							|
+
+## Update actualite
+
+
+
+	PUT /actualites/photo/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>admin access token.</p>							|
 
 # Auth
 
