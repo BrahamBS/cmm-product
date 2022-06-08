@@ -14,6 +14,7 @@ import { UserModule } from '../shared/user/user.module';
 import { RouterModule } from '@angular/router';
 import { FrontFooterComponent } from './pages/front-footer/front-footer.component';
 import { ActualiteCardComponent } from './actualite/actualite-card/actualite-card.component';
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 
 
 
@@ -25,7 +26,8 @@ import { ActualiteCardComponent } from './actualite/actualite-card/actualite-car
     ContactPageComponent,
     InterventionPageComponent,
     FrontFooterComponent,
-    ActualiteCardComponent
+    ActualiteCardComponent,
+    NavBarComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +41,8 @@ import { ActualiteCardComponent } from './actualite/actualite-card/actualite-car
     ContactPageComponent,
     InterventionPageComponent,
     FrontFooterComponent,
-    ActualiteCardComponent
+    ActualiteCardComponent,
+    NavBarComponent
   ],
 })
 export class FrontOfficeModule { }

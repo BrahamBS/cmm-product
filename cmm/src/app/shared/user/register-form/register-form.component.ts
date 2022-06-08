@@ -45,6 +45,7 @@ export class RegisterFormComponent {
         {
           next:data => {
           this.snackBar.open("Utilisateur a été ajouté avec succés", 'Close')
+          this.router.navigate(['/login']);
         },
         error: error => {
           this.snackBar.open("Echec :( ", 'Close')

@@ -5,6 +5,7 @@ import { InterventionPageComponent } from './pages/intervention-page/interventio
 import { ProjetPageComponent } from './pages/projet-page/projet-page.component';
 import { SuiviTierPageComponent } from './pages/suivi-tier-page/suivi-tier-page.component';
 import { HomePageComponent } from '../home-page/home-page.component';
+import { ActualitePageComponent } from '../back-office/pages/actualite-page/actualite-page.component';
 
 
 
@@ -17,9 +18,13 @@ const routes: Routes = [
         component: HomePageComponent
       },
       {
-        path: 'intervention',
+        path: 'actualites',
+        component: ActualitePageComponent,
+
+      },
+      {
+        path: 'interventions',
         component: InterventionPageComponent,
-        children: []
 
       },
 
@@ -29,7 +34,7 @@ const routes: Routes = [
         children: []
       },
       {
-        path: 'suivi-tier',
+        path: 'prestations',
         component: SuiviTierPageComponent,
         children: []
       },
