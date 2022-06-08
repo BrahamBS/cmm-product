@@ -14,6 +14,7 @@ import { AdminLandPageComponent } from './pages/admin-land-page/admin-land-page.
 import { BackOfficeRoutingModule } from './back-office-routing.module';
 import { MaterialModule } from '../shared/material/material.module';
 import { ActualiteModule } from './actualite/actualite.module';
+import { UserModule } from '../shared/user/user.module';
 
 
 
@@ -34,7 +35,8 @@ import { ActualiteModule } from './actualite/actualite.module';
     HttpClientModule,
     BackOfficeRoutingModule,
     MaterialModule,
-    ActualiteModule
+    ActualiteModule,
+    UserModule
   ]
 })
 export class BackOfficeModule { }
