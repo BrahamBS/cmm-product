@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FrontLandpageComponent } from './front-landpage/front-landpage.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginFormComponent } from './shared/user/login-form/login-form.component';
 import { RegisterFormComponent } from './shared/user/register-form/register-form.component';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomePageComponent,
-  },
   {
     path: 'login',
     component: LoginFormComponent,
@@ -34,7 +31,7 @@ const routes: Routes = [
   , 
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'front',
     pathMatch: 'full'
   },
 ];

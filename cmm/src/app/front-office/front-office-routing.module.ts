@@ -6,12 +6,13 @@ import { ProjetPageComponent } from './pages/projet-page/projet-page.component';
 import { SuiviTierPageComponent } from './pages/suivi-tier-page/suivi-tier-page.component';
 import { HomePageComponent } from '../home-page/home-page.component';
 import { ActualitePageComponent } from '../back-office/pages/actualite-page/actualite-page.component';
+import { FrontLandpageComponent } from '../front-landpage/front-landpage.component';
 
 
 
 const routes: Routes = [
   {
-    path: '', component: HomePageComponent,
+    path: '', component: FrontLandpageComponent,
     children: [
       {
         path: 'home',

@@ -13,6 +13,7 @@ import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confir
 import { HomePageComponent } from './home-page/home-page.component';
 import { BackOfficeModule } from './back-office/back-office.module';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FrontLandpageComponent } from './front-landpage/front-landpage.component';
 
 
 
@@ -21,6 +22,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     ConfirmationDialogComponent,
     AppComponent,
     HomePageComponent,
+    FrontLandpageComponent,
 
   ],
   imports: [
