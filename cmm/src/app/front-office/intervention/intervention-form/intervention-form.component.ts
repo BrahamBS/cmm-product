@@ -27,8 +27,8 @@ export class InterventionFormComponent implements OnInit {
 
   interventionForm = this.fb.group({
     titre: [null, Validators.required],
-    //dateDebut: ['', Validators.required],
-    //dateFin: ['', Validators.required],
+    dateDebut: ['', Validators.required],
+    dateFin: ['', Validators.required],
     nature:['',Validators.required],
     description:['', Validators.required],
     beneficiaires:['', Validators.required],
