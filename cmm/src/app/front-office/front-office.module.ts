@@ -16,6 +16,7 @@ import { FrontFooterComponent } from './pages/front-footer/front-footer.componen
 import { ActualiteCardComponent } from './actualite/actualite-card/actualite-card.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { FrontActualitePageComponent } from './pages/front-actualite-page/front-actualite-page.component';
+import { InterventionFormComponent } from './intervention/intervention-form/intervention-form.component';
 
 
 
@@ -29,7 +30,8 @@ import { FrontActualitePageComponent } from './pages/front-actualite-page/front-
     FrontFooterComponent,
     ActualiteCardComponent,
     NavBarComponent,
-    FrontActualitePageComponent
+    FrontActualitePageComponent,
+    InterventionFormComponent
   ],
   imports: [
     CommonModule,
