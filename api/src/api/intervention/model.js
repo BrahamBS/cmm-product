@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose'
+import mongooseKeywords from 'mongoose-keywords'
 
 const interventionSchema = new Schema({
   titre: {
@@ -48,6 +49,8 @@ interventionSchema.methods = {
     } : view
   }
 }
+
+userSchema.plugin(mongooseKeywords, { paths: ['email', 'name'] })
 
 const model = mongoose.model('Intervention', interventionSchema)
 

@@ -27,7 +27,7 @@ const { titre, dateDebut, dateFin, description, beneficiaires, prestataires } = 
  * @apiError 401 admin access only.
  */
 router.post('/',
-  token({ required: true, roles: ['admin'] }),
+  token({ required: true, roles: ['etablissement'] }),
   body({ titre, dateDebut, dateFin, description, beneficiaires, prestataires }),
   create)
 
