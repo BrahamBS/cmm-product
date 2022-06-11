@@ -27,7 +27,7 @@ export class ListInterventionComponent implements OnInit {
   dataSource: InterventionListDataSource;
   datasourceLength: number = 1;
   displayedColumns = [
-    'titre', 'dateDebut', 'dateFin', 
+    'titre', 'dateDebut', 'dateFin','nature',
     'description','beneficiaires','prestataires'
     ];
 

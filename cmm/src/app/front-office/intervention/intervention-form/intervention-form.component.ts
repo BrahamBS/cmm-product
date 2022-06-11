@@ -18,10 +18,18 @@ import { InterventionService } from 'src/app/back-office/intervention/interventi
 })
 export class InterventionFormComponent implements OnInit {
 
+  public natureTypes: {value:string, viewValue:string}[] = [
+    { value: 'Materiel Informatique', viewValue: 'Materiel Informatique' },
+    { value: 'Materiel Bureautique', viewValue: 'Materiel Bureautique' },
+    { value: 'Infrastructure', viewValue: 'Infrastructure' }
+  ]
+
+
   interventionForm = this.fb.group({
     titre: [null, Validators.required],
-    dateDebut: ['', Validators.required],
-    dateFin: ['', Validators.required],
+    //dateDebut: ['', Validators.required],
+    //dateFin: ['', Validators.required],
+    nature:['',Validators.required],
     description:['', Validators.required],
     beneficiaires:['', Validators.required],
     prestataires:['', Validators.required]

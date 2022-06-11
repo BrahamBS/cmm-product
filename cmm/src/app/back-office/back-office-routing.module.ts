@@ -6,10 +6,11 @@ import { AddActualiteComponent } from './actualite/add-actualite/add-actualite.c
 import { UpdateActualiteComponent } from "./actualite/update-actualite/update-actualite.component";
 import { ActualiteResolver } from './actualite/actualite.resolver';
 import { AdminLandPageComponent } from "./pages/admin-land-page/admin-land-page.component";
-import { InterventionPageComponent } from '../front-office/pages/intervention-page/intervention-page.component';
+
 import { ProjetPageComponent } from './pages/projet-page/projet-page.component';
 import { SuiviPrestatairePageComponent } from './pages/suivi-prestataire-page/suivi-prestataire-page.component';
 import { ListInterventionComponent } from './intervention/list-intervention/list-intervention.component';
+import { InterventionPageComponent } from "./pages/intervention-page/intervention-page.component";
 
 const routes: Routes = [
     {

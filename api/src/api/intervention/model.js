@@ -6,7 +6,8 @@ const interventionSchema = new Schema({
     type: String
   },
   dateDebut: {
-    type: String
+    type: String,
+    default: new Date()
   },
   dateFin: {
     type: String
@@ -14,12 +15,15 @@ const interventionSchema = new Schema({
   description: {
     type: String
   },
+  nature:{
+    type:String
+  },
   beneficiaires: {
     type: String
   },
   prestataires: {
     type: String
-  }
+  },
 }, {
   timestamps: true,
   toJSON: {
@@ -36,6 +40,7 @@ interventionSchema.methods = {
       titre: this.titre,
       dateDebut: this.dateDebut,
       dateFin: this.dateFin,
+      nature:this.nature,
       description: this.description,
       beneficiaires: this.beneficiaires,
       prestataires: this.prestataires,
@@ -50,7 +55,9 @@ interventionSchema.methods = {
   }
 }
 
-userSchema.plugin(mongooseKeywords, { paths: ['email', 'name'] })
+interventionSchema.plugin(mongooseKeywords, { paths: [
+  'titre', 'dateDebut','dateFin','description',
+  'beneficiaires','prestataires','nature'] })
 
 const model = mongoose.model('Intervention', interventionSchema)
 

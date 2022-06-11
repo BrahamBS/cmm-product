@@ -1,40 +1,100 @@
+<div class="flex flex-col w-full px-2 py-2 mx-3 my-3">
+  <h1 class="text-center text-blue-600">Formulaire d'Intervention</h1>
 <form [formGroup]="interventionForm" novalidate>
     <mat-card class="intervention-card">
-      <mat-card-header>
-         <mat-card-title>Ajout Actualité</mat-card-title>
-      </mat-card-header>
-      
+ 
       <mat-card-content>
+
         <div class="row">
           <div class="col">
             <mat-form-field class="full-width">
               <input matInput placeholder="titre" formControlName="titre">
               <mat-error *ngIf="interventionForm.controls['titre'].hasError('required')">
-                Titre d'Actualite <strong>est obligatoire</strong>
+                Titre <strong>est obligatoire</strong>
               </mat-error>
             </mat-form-field>
           </div>
         </div>
-        <div class="row">
+
+        <!-- <div class="row">
           <div class="col">
-           
-              <angular-editor 
-                matInput
-                placeholder="'Tapez ici ...'" 
-                formControlName="contenue"
-                >
-              </angular-editor>
-              <mat-error *ngIf="interventionForm.controls['contenue'].hasError('required')">
-                Contenue <strong>est obligatoire</strong>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="dateDebut" formControlName="dateDebut">
+              <mat-error *ngIf="interventionForm.controls['dateDebut'].hasError('required')">
+                Date Debut <strong>est obligatoire</strong>
               </mat-error>
-           
+            </mat-form-field>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="dateFin" formControlName="dateFin">
+              <mat-error *ngIf="interventionForm.controls['dateFin'].hasError('required')">
+               Date Fin <strong>est obligatoire</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div> -->
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="description" formControlName="description">
+              <mat-error *ngIf="interventionForm.controls['description'].hasError('required')">
+               Description <strong>est obligatoire</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="beneficiaires" formControlName="beneficiaires">
+              <mat-error *ngIf="interventionForm.controls['beneficiaires'].hasError('required')">
+               Beneficiaires <strong>est obligatoire</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+       
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Nature</mat-label>
+              <mat-select formControlName="nature">
+                <mat-option *ngFor="let dType of natureTypes" [value]="dType.value">
+                  {{dType.viewValue}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="interventionForm.controls['nature'].hasError('required')">
+                Nature <strong>est obligatoire</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="prestataires" formControlName="prestataires">
+              <mat-error *ngIf="interventionForm.controls['prestataires'].hasError('required')">
+                Prestataires <strong>est obligatoire</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+
+
+
       </mat-card-content>
       <mat-card-actions class="flex flex-row w-full ">
-        <button  mat-raised-button [routerLink]="['/admin/actualite']">Annuler</button>
+        <button  mat-raised-button [routerLink]="['/front/home']">Annuler</button>
         <button mat-raised-button color="primary" (click)="onSubmit()">Enregistrer</button>
       </mat-card-actions>
     </mat-card>
   </form>
-  
+  </div>

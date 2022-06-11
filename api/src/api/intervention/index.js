@@ -7,7 +7,7 @@ import { schema } from './model'
 export Intervention, { schema } from './model'
 
 const router = new Router()
-const { titre, dateDebut, dateFin, description, beneficiaires, prestataires } = schema.tree
+const { titre, dateDebut, dateFin, description,nature, beneficiaires, prestataires } = schema.tree
 
 /**
  * @api {post} /interventions Create intervention
@@ -27,8 +27,8 @@ const { titre, dateDebut, dateFin, description, beneficiaires, prestataires } = 
  * @apiError 401 admin access only.
  */
 router.post('/',
-  token({ required: true, roles: ['etablissement'] }),
-  body({ titre, dateDebut, dateFin, description, beneficiaires, prestataires }),
+  //token({ required: true, roles: ['etablissement'] }),
+  body({ titre, dateDebut, dateFin, description, nature, beneficiaires, prestataires }),
   create)
 
 /**
@@ -44,7 +44,7 @@ router.post('/',
  * @apiError 401 admin access only.
  */
 router.get('/',
-  token({ required: true, roles: ['admin'] }),
+  //token({ required: true, roles: ['admin'] }),
   query(),
   index)
 
