@@ -42,8 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     RouterModule,
     ReactiveFormsModule,
-    UserModule,
-    InterventionModule  ],
+    UserModule
+  ],
   exports: [
     ProjetPageComponent,
     SuiviTierPageComponent,
@@ -53,6 +53,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ActualiteCardComponent,
     NavBarComponent,
     FrontActualitePageComponent,
+    InterventionFormComponent
     
   ],
 })

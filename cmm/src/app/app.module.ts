@@ -14,6 +14,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { BackOfficeModule } from './back-office/back-office.module';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FrontLandpageComponent } from './front-landpage/front-landpage.component';
+import { InterventionModule } from './back-office/intervention/intervention.module';
 
 
 
@@ -35,6 +36,7 @@ import { FrontLandpageComponent } from './front-landpage/front-landpage.componen
     FormsModule,
     ReactiveFormsModule,
     FrontOfficeModule,
+    InterventionModule,
     BackOfficeModule,
     AngularEditorModule
    ],
