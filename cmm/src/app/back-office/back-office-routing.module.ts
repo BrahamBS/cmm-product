@@ -9,6 +9,7 @@ import { AdminLandPageComponent } from "./pages/admin-land-page/admin-land-page.
 import { InterventionPageComponent } from '../front-office/pages/intervention-page/intervention-page.component';
 import { ProjetPageComponent } from './pages/projet-page/projet-page.component';
 import { SuiviPrestatairePageComponent } from './pages/suivi-prestataire-page/suivi-prestataire-page.component';
+import { ListInterventionComponent } from './intervention/list-intervention/list-intervention.component';
 
 const routes: Routes = [
     {
@@ -34,18 +35,11 @@ const routes: Routes = [
         {
             path: 'intervention',
             component: InterventionPageComponent,
-          //   children: [
-          //     { path: "", component: ListActualiteComponent },
-          //     { path: "add", component: AddActualiteComponent },
-          //     {
-          //       path: "update/:id",
-          //       component: UpdateActualiteComponent,
-          //       resolve: {
-          //         actualite: ActualiteResolver
-          //       }
-          //     },
-          //     { path: "**", redirectTo: "", pathMatch: "full" }
-          //   ]
+            children: [
+              { path: "", component: ListInterventionComponent },
+              
+              { path: "**", redirectTo: "", pathMatch: "full" }
+            ]
     
            },
            {

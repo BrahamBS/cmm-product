@@ -17,6 +17,8 @@ import { ActualiteCardComponent } from './actualite/actualite-card/actualite-car
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { FrontActualitePageComponent } from './pages/front-actualite-page/front-actualite-page.component';
 import { InterventionFormComponent } from './intervention/intervention-form/intervention-form.component';
+import { InterventionModule } from '../back-office/intervention/intervention.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -32,13 +34,16 @@ import { InterventionFormComponent } from './intervention/intervention-form/inte
     NavBarComponent,
     FrontActualitePageComponent,
     InterventionFormComponent
+    
   ],
   imports: [
     CommonModule,
     FrontOfficeRoutingModule,
     MaterialModule,
-    UserModule
-  ],
+    RouterModule,
+    ReactiveFormsModule,
+    UserModule,
+    InterventionModule  ],
   exports: [
     ProjetPageComponent,
     SuiviTierPageComponent,
@@ -47,7 +52,8 @@ import { InterventionFormComponent } from './intervention/intervention-form/inte
     FrontFooterComponent,
     ActualiteCardComponent,
     NavBarComponent,
-    FrontActualitePageComponent
+    FrontActualitePageComponent,
+    
   ],
 })
 export class FrontOfficeModule { }
