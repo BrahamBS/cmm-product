@@ -5,6 +5,7 @@ import actualite from './actualite'
 import projet from './projet'
 import intervention from './intervention'
 import suiviprestation from './suiviprestation'
+import demandeIntervention from './demande-intervention'
 
 const router = new Router()
 
@@ -37,5 +38,6 @@ router.use('/actualites', actualite)
 router.use('/projets', projet)
 router.use('/interventions', intervention)
 router.use('/suiviprestations', suiviprestation)
+router.use('/demande-interventions', demandeIntervention)
 
 export default router

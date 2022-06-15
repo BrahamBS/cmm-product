@@ -8,6 +8,7 @@ import { HomePageComponent } from '../home-page/home-page.component';
 import { ActualitePageComponent } from '../back-office/pages/actualite-page/actualite-page.component';
 import { FrontLandpageComponent } from '../front-landpage/front-landpage.component';
 import { FrontActualitePageComponent } from './pages/front-actualite-page/front-actualite-page.component';
+import { DemandeIterventionFormComponent } from '../demande-intervention/demande-itervention-form/demande-itervention-form.component';
 
 
 
@@ -39,6 +40,10 @@ const routes: Routes = [
         path: 'prestations',
         component: SuiviTierPageComponent,
         children: []
+      },
+      {
+        path: 'demande-intervention',
+        component: DemandeIterventionFormComponent,
       },
       {
         path: '**',

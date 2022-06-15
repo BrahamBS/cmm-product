@@ -15,6 +15,7 @@ import { BackOfficeModule } from './back-office/back-office.module';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FrontLandpageComponent } from './front-landpage/front-landpage.component';
 import { InterventionModule } from './back-office/intervention/intervention.module';
+import { DemandeIterventionFormComponent } from './demande-intervention/demande-itervention-form/demande-itervention-form.component';
 
 
 
@@ -24,6 +25,7 @@ import { InterventionModule } from './back-office/intervention/intervention.modu
     AppComponent,
     HomePageComponent,
     FrontLandpageComponent,
+    DemandeIterventionFormComponent,
 
   ],
   imports: [

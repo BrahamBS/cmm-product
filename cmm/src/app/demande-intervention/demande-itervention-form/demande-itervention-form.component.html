@@ -1,0 +1,58 @@
+<div class="flex flex-col w-full px-2 py-2 mx-3 my-3">
+    <h1 class="text-center text-blue-600">Formulaire d'Intervention</h1>
+  <form [formGroup]="interventionForm" novalidate>
+      <mat-card class="intervention-card">
+   
+        <mat-card-content>
+  
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Etablissement" formControlName="etablissement">
+                <mat-error *ngIf="interventionForm.controls['etablissement'].hasError('required')">
+                    etablissement <strong>est obligatoire</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+  
+  
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="description" formControlName="description">
+                <mat-error *ngIf="interventionForm.controls['description'].hasError('required')">
+                 Description <strong>est obligatoire</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+  
+         
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <mat-label>Type Intervention</mat-label>
+                <mat-select formControlName="typeIntervention">
+                  <mat-option *ngFor="let dType of natureTypes" [value]="dType.value">
+                    {{dType.viewValue}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="interventionForm.controls['typeIntervention'].hasError('required')">
+                    Type Intervention <strong>est obligatoire</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+  
+        
+  
+  
+        </mat-card-content>
+        <mat-card-actions class="flex flex-row w-full ">
+          <button  mat-raised-button [routerLink]="['/front/home']">Annuler</button>
+          <button mat-raised-button color="primary" (click)="onSubmit()">Enregistrer</button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    </div>
