@@ -7,7 +7,7 @@ import { schema } from './model'
 export Intervention, { schema } from './model'
 
 const router = new Router()
-const { titre, dateDebut, dateFin, description,nature, beneficiaires, prestataires } = schema.tree
+const { titre, dateDebut, dateFin, description, nature, beneficiaires, prestataires } = schema.tree
 
 /**
  * @api {post} /interventions Create intervention
@@ -27,7 +27,7 @@ const { titre, dateDebut, dateFin, description,nature, beneficiaires, prestatair
  * @apiError 401 admin access only.
  */
 router.post('/',
-  //token({ required: true, roles: ['etablissement'] }),
+  token({ required: true, roles: ['admin', 'prestataire'] }),
   body({ titre, dateDebut, dateFin, description, nature, beneficiaires, prestataires }),
   create)
 
@@ -44,7 +44,7 @@ router.post('/',
  * @apiError 401 admin access only.
  */
 router.get('/',
-  //token({ required: true, roles: ['admin'] }),
+  token({ required: true }),
   query(),
   index)
 
@@ -60,7 +60,7 @@ router.get('/',
  * @apiError 401 admin access only.
  */
 router.get('/:id',
-  token({ required: true, roles: ['admin'] }),
+  token({ required: true}),
   show)
 
 /**
@@ -81,7 +81,7 @@ router.get('/:id',
  * @apiError 401 admin access only.
  */
 router.put('/:id',
-  token({ required: true, roles: ['admin'] }),
+  token({ required: true, roles: ['admin','prestataire'] }),
   body({ titre, dateDebut, dateFin, description, beneficiaires, prestataires }),
   update)
 
@@ -96,7 +96,7 @@ router.put('/:id',
  * @apiError 401 admin access only.
  */
 router.delete('/:id',
-  token({ required: true, roles: ['admin'] }),
+  token({ required: true, roles: ['prestataire','admin'] }),
   destroy)
 
 export default router

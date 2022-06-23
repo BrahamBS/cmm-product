@@ -26,7 +26,7 @@ const { titre, photoUrl, contenue, isFeatured } = schema.tree
  * @apiError 401 admin access only.
  */
 router.post('/',
-  //token({ required: true, roles: ['admin'] }),
+  token({ required: true, roles: ['admin'] }),
   body({ titre,  contenue }),
   create)
 
@@ -70,7 +70,7 @@ router.get('/:id',
  * @apiError 401 admin access only.
  */
 router.put('/:id',
-  //token({ required: true, roles: ['admin'] }),
+  token({ required: true, roles: ['admin'] }),
   body({ titre, contenue, isFeatured }),
   update)
 
@@ -86,7 +86,7 @@ router.put('/:id',
  * @apiError 401 admin access only.
  */
  router.put('/photo/:id',
- //token({ required: true, roles: ['admin'] }),
+ token({ required: true, roles: ['admin'] }),
  uploadActualitePhoto)
 
 
@@ -101,7 +101,7 @@ router.put('/:id',
  * @apiError 401 admin access only.
  */
 router.delete('/:id',
- // token({ required: true, roles: ['admin'] }),
+  token({ required: true, roles: ['admin'] }),
   destroy)
 
 export default router

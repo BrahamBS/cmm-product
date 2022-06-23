@@ -20,9 +20,6 @@ const routes: Routes = [
   {
     path: 'front',
     loadChildren: () => import('./front-office/front-office.module').then(m => m.FrontOfficeModule),
-    // canLoad:[AuthGuard],
-    // canActivate:[AuthGuard],
-    // canActivateChild:[AuthGuard]
   },
   {
     path: 'admin',

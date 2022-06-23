@@ -9,6 +9,7 @@ import { ActualitePageComponent } from '../back-office/pages/actualite-page/actu
 import { FrontLandpageComponent } from '../front-landpage/front-landpage.component';
 import { FrontActualitePageComponent } from './pages/front-actualite-page/front-actualite-page.component';
 import { DemandeIterventionFormComponent } from '../demande-intervention/demande-itervention-form/demande-itervention-form.component';
+import { AuthGuard } from '../guard/auth.guard';
 
 
 
@@ -28,22 +29,26 @@ const routes: Routes = [
       {
         path: 'interventions',
         component: InterventionPageComponent,
+        canActivate:[AuthGuard]
 
       },
 
       {
         path: 'projets',
         component: ProjetPageComponent,
+        canActivate:[AuthGuard],
         children: []
       },
       {
         path: 'prestations',
         component: SuiviTierPageComponent,
+        canActivate:[AuthGuard],
         children: []
       },
       {
         path: 'demande-intervention',
         component: DemandeIterventionFormComponent,
+        canActivate:[AuthGuard]
       },
       {
         path: '**',
